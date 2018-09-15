@@ -24,16 +24,22 @@ export default class Welcome extends React.Component {
   render() {
     return (
       <div>
-        <h3>
+        <h1
+          className="mb-4"
+        >
           Hello, {this.state.name}!
-        </h3>
+        </h1>
         <hr />
         <form >
-          <label htmlFor="name">
+          <label
+          htmlFor="name"
+          className="block mb-2"
+          >
             Say hello to:
           </label>
           <input
             id="name"
+            className="bg-blue-lightest p-2 text-grey-light"
             type="text"
             value={this.state.name}
             onChange={(e) => this.updateName(e.target.value)}
