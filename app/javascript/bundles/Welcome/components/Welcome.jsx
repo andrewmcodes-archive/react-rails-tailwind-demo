@@ -6,14 +6,8 @@ export default class Welcome extends React.Component {
     name: PropTypes.string.isRequired, // this is passed from the Rails view
   };
 
-  /**
-   * @param props - Comes from your rails view.
-   */
   constructor(props) {
     super(props);
-
-    // How to set initial state in ES6 class syntax
-    // https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class
     this.state = { name: this.props.name };
   }
 
@@ -31,12 +25,6 @@ export default class Welcome extends React.Component {
         </h1>
         <hr />
         <form >
-          <label
-          htmlFor="name"
-          className="block mb-2"
-          >
-            Say hello to:
-          </label>
           <input
             id="name"
             className="bg-blue-lightest p-2 text-grey-light"
